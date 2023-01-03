@@ -1,0 +1,769 @@
+@font-face {
+    font-family: poppins;
+    src: url(./polices/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: roboto;
+    src: url(./polices/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: absolute;
+    src: url(./polices/Absolute.ttf);
+}
+@font-face {
+    font-family: TheEssential;
+    src: url(./polices/TheEssential.ttf);
+}
+@font-face {
+    font-family: victorianna;
+    src: url(./polices/VTF\ victorianna\ thin.otf);
+}
+:root{
+    --poppins:'poppins',sans-serif;
+    --absolute:'absolute',sans-serif;
+    --essential:'essential',sans-serif;
+    --victorianna:'victorianna',sans-serif;
+    --dark-mode: #022b3a;
+}
+html{
+    overflow-x: hidden;
+
+}
+body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+button{
+    cursor: pointer;
+
+}
+button:active{
+    transform: translateY(3px);
+}
+/* mode sombre  */
+#dark-mode{
+    background: transparent;
+    font-size: 18px;
+    padding: 10px;
+}
+#darkMode.active {
+    color: #f1f1f1;
+    background: var(--dark-mode);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) .2s;
+}
+#darkMode.active header h1{
+    color: rgb(208, 207, 207);
+}
+#darkMode.active #headerP{
+    color: #d7d3d3e7;
+}
+#darkMode.active .pull-desc{
+    border: 1px solid white;
+}
+#darkMode.active .section-shirts p{
+    color: #f1f1f1;
+}
+#darkMode.active .section-shirts img{
+    border: 4px double #f1f1f1;
+}
+#darkMode.active .section-shirts button{
+    border-color: #f1f1f1;
+    color: #f1f1f1;
+}
+#darkMode.active .section-shirts button:hover{
+    background: #f1f1f1;
+    color: #000;
+    border-color: rgb(1, 1, 1);
+}
+#darkMode.active #formDiv form{
+    background: var(--dark-mode);
+}
+nav.active .fa{
+    color: rgb(228, 228, 228);
+}
+nav.active {
+    color: #f1f1f1;
+    /* background: #022b3a; */
+    background: rgb(93, 77, 56);
+    background: #43281c;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) .2s;
+}
+nav.active #menu-list{
+    background: rgba(95, 141, 155, 0.591);
+}
+.mini-nav.active{
+    color: #e2dcdc;
+    background: #83552d;
+}
+.mini-nav.active a{
+    color: rgb(212, 207, 207);
+}
+
+/* mode sombre  */
+/* barre de navigation  */
+.mini-nav{
+    height: 20px;
+    width: 100%;
+    padding: 0 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #020200;
+    background: rgb(222, 222, 222);
+    /* background: tan; */
+}
+.mini-nav p{
+    font-size: 15px;
+    font-family: var(--poppins);
+    margin-left: 30px;
+}
+.mini-nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-right: 20px;
+    list-style-type: none;
+}
+.mini-nav ul a{
+    text-decoration: none;
+    /* padding: 5px; */
+    margin-left: 5px;
+    font-size: 15px;
+    font-family: var(--poppins);
+    color: #020200;
+}
+.mini-nav ul a:hover{
+    border-bottom: 1px solid #f1f1f1;
+}
+/* barre de navigation principale  */
+nav{
+    height: 60px;
+    width: 100%;
+    background: rgb(250, 250, 250);
+    display: flex;
+    padding: 0 10px;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+nav .logo{
+    margin-left: 40px;
+    font-family: TheEssential;
+    font-size: 3rem;
+    color: #000000;
+}
+nav .menu ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+}
+nav .menu a{
+    text-decoration: none;
+    margin-left: 7px;
+    font-size: 14px;
+    font-weight: bolder;
+    font-family: var(--poppins);
+    color: #707070;
+}
+nav .icones ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 40px;
+    list-style-type: none;
+}
+nav .icones input{
+    margin-right: 10px;
+}
+nav .icones li a{
+    margin-left: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+nav .icones input[type=search]{
+    padding: 12px 35px;
+    width: 200px;
+    border: none;
+    border-radius: 20px;
+    background: #e5e5e5;
+    outline: none;
+}
+nav .icones .fa-search{
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 18px;
+    cursor: pointer;
+
+}
+nav .icones input[type=search]::placeholder{
+    color: rgb(171, 171, 171);
+    font-size: 14px;
+}
+
+.menu-burger .fa-hamburger{
+    position: fixed;
+    top: 45px;
+    right: 0;
+    margin-right: 40px;
+    color: rgb(70, 65, 65);
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 100;
+}
+.menu-burger ul{
+    height: 80vh;
+    width: 200px;
+    background: rgba(210, 180, 140, 0.655);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    position: fixed;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    transform: translateX(500px);
+}
+
+.menu-burger ul li{
+    margin-top: 10px;
+    
+}
+.menu-burger ul li a{
+    font-size: 16px;
+    padding: 10px;
+    color: #343030;
+}
+.menu-burger a:hover{
+    transition: all .3s;
+    color: rgb(246, 246, 246);
+}
+.menu-burger p {
+    font-size: 18px;
+    font-family: roboto,sans-serif;
+    font-weight: bold;
+    color: rgb(110, 14, 89);
+    position: inherit;
+    bottom: 20px;
+    cursor: pointer;
+}
+.menu-burger ul.active{
+    transition: .5s cubic-bezier(0.39, 0.575, 0.565, 1);
+    transform: translateX(0px);
+}
+
+/* barre de navigation principale  */
+/* barre de navigation  */
+/* section du header  */
+/* formulaire d'inscription  */
+#formDiv{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: rgba(159, 156, 154, 0.772);
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(2px);
+    z-index: 100;
+}
+#formDiv form{
+    background: rgb(241, 235, 228);
+    position: fixed;
+    top: 10vh;
+    max-width: 400px;
+    min-height: 500px;
+    padding: 20px;
+    padding-bottom: 50px;
+    text-align: center;
+    
+}
+
+#formDiv .formbck{
+    width: 100%;
+    height: 100vh;
+}
+#formDiv input{
+    width: 350px;
+    height: 40px;
+    margin-top: 20px;
+    padding-left: 10px;
+    background: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+#formDiv input[type=submit]{
+    width: 200px;
+    cursor: pointer;
+    background-color: rgb(10, 161, 177);
+    color: #fff;
+    font-size: 18px;
+    margin-top: 10px;
+}
+#formDiv input[type=submit]:active{
+    transform: translateY(3px);
+}
+#formDiv #close{
+    margin-left: 370px;
+    padding: 2px 7px;
+    background: rgb(237, 71, 71);
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+#formDiv #close:hover{
+    transition: .3s;
+    /* background: red; */
+}
+#formDiv h1{
+    font-size: 2.2rem;
+    font-family: roboto,sans-serif;
+}
+#formDiv p{
+    font-size: 16px;
+    font-family: roboto,sans-serif;
+    margin-top: 30px;
+}
+#formDiv p span{
+    color: rgb(250, 93, 93);
+    font-weight: bold;
+    /* border-bottom: 2px solid red; */
+    cursor: pointer;
+}
+/* formulaire d'inscription  */
+header{
+    min-height: 85vh;
+    width: 100%;
+}
+header .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+header .container .desc{
+    min-height: 200px;
+    width: 500px;
+    text-align: center;
+}
+header .desc h1{
+    color: #4b4848;
+    font-size: 4.5rem;
+    font-family: var(--poppins);
+    /* font-family: roboto; */
+}
+header .desc p{
+    font-size: 1.3rem;
+    font-family: poppins;
+    font-weight: 600;
+    color: #454444;
+}
+header .desc button{
+    padding: 10px 20px;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.189);
+    font-size: 16px;
+    font-family: poppins;
+    background: tan;
+    color: #f1f1f1;
+}
+header .container img{
+    
+    width: 450px;
+}
+/* section du header  */
+/* section pulls  */
+.section-pulls{
+    width: 100%;
+    min-height: 100vh;
+}
+.section-pulls h3{
+    font-family: poppins;
+    font-size: 1.5rem;
+    margin-left: 40px;
+    padding: 10px;
+}
+.section-pulls .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+.section-pulls .container img{
+    width: 300px;
+}
+.section-pulls .pull-desc{
+    min-width: 300px;
+    margin: 27px;
+    padding: 10px;
+    border: 1px solid black;
+}
+.section-pulls .pull-desc h4{
+    /* width: 200px; */
+    font-size: 1.2rem;
+    font-family: poppins;
+    padding: 3px;
+}
+.section-pulls .pull-desc button{
+    padding: 5px 10px;
+    cursor: pointer;
+    font-family: poppins;
+    font-weight: 600;
+    background: rgb(217, 216, 215);
+    border: none;
+}
+/* section noveaute de pulls 2*/
+.section-pulls2{
+    width: 100%;
+    min-height: 100vh;
+    padding-bottom: 20px;
+}
+.section-pulls2 .container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+.section-pulls2 .pull-desc{
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid #000;
+}
+.section-pulls2 .container .pull-desc img{
+    max-width: 500px;
+    height: 90%;
+}
+.section-pulls2 h3{
+    font-family: poppins;
+    font-size: 1.5rem;
+    margin-left: 40px;
+    padding: 10px;
+    width: 250px;
+}
+.section-pulls2 .pull-desc button{
+    padding: 5px 10px;
+    cursor: pointer;
+    font-family: poppins;
+    font-weight: 600;
+    background: rgb(217, 216, 215);
+    border: none;
+}
+.section-pulls2 .pull-desc h4{
+    font-size: 1.2rem;
+    font-family: poppins;
+    padding: 3px;
+}
+/* section noveaute de pulls  */
+/* section pulls 2  */
+
+/* section of personnalizing t-shirts intro  */
+.section-shirts{
+    min-height: 100vh;
+    width: 95%;
+    margin-top: 20px;
+    /* background: linear-gradient(to left,#ffffff,#e1bb86,#fefae0); */
+}
+.section-shirts .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.section-shirts .container .desc{
+    min-height: 200px;
+    width: 500px;
+    text-align: center;
+}
+.section-shirts .desc h1{
+    font-size: 5rem;
+    font-family: var(--victorianna);
+}
+.section-shirts .desc p{
+    font-size: 1.3rem;
+    font-family: poppins;
+    font-weight: 600;
+    color: #454444;
+    margin-top: -50px;
+}
+.section-shirts .desc button{
+    padding: 10px 20px;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.189);
+    font-size: 16px;
+    font-family: poppins;
+    background: transparent;
+    border: 4px double black;
+    color: #000;
+}
+.section-shirts .desc button:hover{
+    transition: .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    background: #000;
+    color: #f1f1f1;
+    border: 4px double rgb(255, 251, 251);
+}
+.section-shirts .container img{
+    margin-top: 50px;
+    width: 400px;
+    border: 4px double black;
+    padding: 10px;
+}
+/* about-tshirt text of .....  */
+.about-tshirt{
+    min-height: 200px;
+    width: 100%;
+    margin: 0 auto;
+    /* margin-bottom: 20px; */
+    padding: 10px;
+    background: rgb(0, 0, 0);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.about-tshirt h3{
+    min-width: 100px;
+    min-height: 40px;
+    padding: 10px;
+    text-align: center;
+    font-family: roboto;
+    font-size: 1.5rem;
+    color: #fff;
+}
+.about-tshirt p{
+    max-width: 600px;
+    min-height: 40px;
+    padding: 15px;
+    font-family: roboto;
+    text-align: center;
+    color: #e5e5e5;
+    margin-top: -30px;
+}
+    /* about-tshirt text of .....  */
+
+    /* section gallery-shirts list images  */
+.galery-shirts{
+    width: 100%;
+    min-height: 80vh;
+    padding: 0 20px;
+    background: #f1f1f1;
+}
+.galery-shirts .menu-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: roboto,sans-serif;
+    padding: 0 10px;
+}
+.galery-shirts .menu-top p{
+    margin-left: 30px;
+    font-size: 20px;
+}
+.galery-shirts .icones i{
+    margin-right: 10px;
+    font-size: 20px;
+    padding: 10px;
+    background: rgb(217, 216, 216);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.galery-shirts .icones i:hover{
+    transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    background: rgb(188, 187, 187);
+}
+.galery{
+    padding: 0 30px;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 12px;
+    scroll-padding: 10px;
+}
+#mySlide{
+    max-width: 350px;
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+#mySlide .txt{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+
+}
+#mySlide .price{
+    font-family: var(--poppins);
+    color: #898989;
+}
+#mySlide .txt-left{
+    font-family: roboto,sans-serif;
+}
+#mySlide .category{
+    color: #828080;
+    margin-top: -10px;
+    font-weight: 500;
+}
+#mySlide #imgShirt{
+    width: 300px;
+}
+    /* section gallery-shirts list images  */
+    /* section of personnalizing t-shirts intro  */
+
+ /* section aipods  */
+ .airpods{
+    width: 110%;
+    height: 80vh;
+    background: rgb(0, 0, 0);
+    color: #f1f1f1;
+}
+.airpods .main-card{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+
+}
+.airpods .main-card p{
+    width: 500px;
+    font-family: var(--poppins);
+    text-align: center;
+ }
+ .airpods h2{
+    font-size: 2.5rem;
+    font-family: roboto,sans-serif;
+ }
+ .airpods .fa-apple{
+    color: rgb(255, 255, 255);
+    margin-left: 5x;
+    cursor: pointer;
+ }
+ .airpods .main-card img{
+    width: 500px
+ }
+/* section aipods  */
+
+/* espace responsive  */
+@media screen and (max-width:600px) {
+    /* barre de navgation  */
+    nav{
+        flex-direction: column;
+        height: 80px;
+        text-align: center;
+    }
+    nav .logo{
+        margin-top: 10px;
+        margin-left: -30px;
+    }
+    .fa-hamburger{
+        position: relative;
+        left: -260px;
+        margin-top: 10px;
+    }
+    nav input[type=search], .fa-search,.fa-heart{
+        display: none;
+    }
+    nav .fa-shopping-bag{
+        position: absolute;
+        top: 60px;
+        right: 20px;
+    }
+    .menu-burger ul{
+        height: 80vh;
+        width: 200px;
+        top: 80px;
+        left: -5px;
+        transform: translateX(-500px);
+    }
+    /* barre de navgation  */
+    /* formulaire d'inscription */
+    #formDiv form{
+        top: 10vh;
+        max-width: 300px;
+        
+    }
+    #formDiv input{
+        width: 280px;
+    }
+    #formDiv #close{
+        margin-left: 270px;
+        font-size: 20px;
+    }
+         /* section pulls2 rxesponsive  */
+         .section-pulls2{
+            margin-left: -15p;
+            padding-left: 10xp;
+         }
+         .section-pulls2 img{
+            width: 300px;
+         }
+         .section-shirts .container h1{
+            font-size: 3rem;
+            padding-bottom: 50px;
+         }
+         .section-shirts .container img{
+            width: 300px;
+            margin-left: 15px;
+         }
+         header .container h1{
+            margin-top: -10px;
+         }
+         header .container img{
+            width: 350px;
+         }
+         .airpods .main-card h2{
+            font-size: 1.5rem;
+            text-align: center;
+         }
+         .airpods .main-card p{
+            color: rgb(231, 228, 228);
+            text-align: center;
+            width: 300px;
+            margin-left: 40px;
+            margin-top: 40px;
+            height: 100px;
+         }
+         .airpods .main-card{
+            text-align: center;
+        }
+        .airpods .main-card img{
+            width: 400px;
+            margin-top: 40px;
+            margin-right: 40px;
+         }
+         .airpods {
+             background: rgb(0, 0, 0);
+             height: 500px;
+             display: flex;
+             justify-content: center;
+             flex-direction: column;
+         }
+    
+         /* section pulls2 responsive  */
+}
+/* formulaire d'inscription */
+   
+/* espace responsive  */
