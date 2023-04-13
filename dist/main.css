@@ -1,0 +1,363 @@
+
+/* scroll bar styling  */
+body::-webkit-scrollbar {
+  width: 12px;
+}
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(5, 57, 139);
+  border-radius: 20px;
+}
+/* scroll bar styling  */
+html{
+    scroll-behavior: smooth;
+}
+*{
+    transition: background .3s;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    overflow-x: hidden;
+}
+
+/* dark mode with css  */
+body.dark{
+    background: #0a0b18;
+}
+body.dark .logo{
+    color: #fff;
+}
+body.dark .t{
+    color: #f1f1f1;
+}
+body.dark .box{
+    background-color: #fff;
+}
+body.dark .l{
+    color: #ededed;
+}
+body.dark .p{
+    color: rgb(218, 218, 218);
+}
+body.dark .h{
+    color: #e0e0e0;
+}
+body.dark .open-btn{
+    color: #f1f1f1;
+}
+/* dark mode with css  */
+.container{
+    width: 100%;
+    min-height: 100vh;
+}
+nav img{
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 50px;
+}
+nav .menu{
+    text-transform: uppercase;
+  
+}
+.open-btn{
+    display: none;
+    margin-right: 20px;
+    padding: 10px;
+    cursor: pointer;
+}
+.bxs-moon{
+    position: absolute;
+    right: 200px;
+    font-size: 1.3rem;
+    color: #212121;
+}
+.bxs-sun{
+    color: rgb(232, 232, 232);
+}
+.bxs-moon:active{
+    transition: .3s;
+    cursor: pointer;
+    color: black;
+}
+.close-btn{
+    position: absolute;
+    right:15px;
+    top: 10px;
+    color: rgb(37, 37, 37);
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+header{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+header .right-box{
+    width: 500px;
+    height: 500px;
+    background: rgba(0, 0, 0, 0);
+    position: relative;
+    top: -60px;
+}
+header .right-box img{
+    width: 700px;
+    animation: anim 3s  infinite;
+}
+@keyframes anim {
+    0%{
+        margin-top: 40px;
+    }
+    50%{
+        margin-top: 0px;
+    }
+    100%{
+        margin-top: 40px;
+    }
+}
+/* section about */
+#about .t-about{
+    border: 2px solid rgb(171, 169, 169);
+    min-width: 150px;
+}
+.quality-grid .box img{
+    width: 100px;
+}
+.quality-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,350px);
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    right: 20px;
+}
+
+/* section about */
+/* section how its work  */
+section.how{
+    min-height: 100vh;
+}
+/* responsive 900px  */
+@media screen and (max-width:900px) {
+    section.how{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+/* responsive 900px  */
+/* section how its work  */
+/* section testimonials  */
+section.testimonials{
+    min-height: 100vh;
+}
+section.testimonials .quality-grid .box{
+    border-radius: 10px;
+
+}
+section.testimonials .quality-grid .boximg{
+    object-fit: contain;
+}
+section.testimonials .quality-grid .box img{
+    background: linear-gradient(45deg,#1488cc,#2b32b2);
+    width: 100%;
+    height: 200px;
+    margin-top: -20px;
+    /* border-radius: 50%; */
+    overflow: hidden;
+
+}
+section.testimonials .quality-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,250px);
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    right: 20px;
+}
+/* section testimonials  */
+/* contact form  */
+section.form{
+    min-height: 80vh;
+}
+section.form form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+section.form form input[type=text],[type=email]{
+    background: #ffffff;
+    border: 2px solid #f1f1f1;
+    margin-top: 10px;
+    width: 90%;
+    height: 45px;
+    padding: 10px 20px;
+    outline: none;
+    font-weight: 600;
+}
+section.form form input[type=submit]{
+    width: 250px;
+    cursor: pointer;
+}
+section.form form #message{
+    /* height: 100px; */
+    margin-top: 10px;
+    background: #f9f9f9;
+    padding: 10px 20px;
+    outline: none;
+    resize: none;
+    width: 90%;
+    font-weight: 600;
+}
+
+/* contact form  */
+/* footer  */
+footer{
+    min-height: 50vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+footer .left{
+    padding: 20px;
+    margin-top: 20px;
+}
+footer .left p{
+    width: 500px;
+}
+footer .boxes{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-right: 40px;
+}
+footer .boxes .box{
+    margin:0 20px;
+    background: transparent;
+}
+footer .social-links{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+footer .social-links .bx{
+    font-size: 2.5rem;
+    margin: 10px;
+}
+footer hr{
+    width: 90%;
+    border: 1px solid rgb(28, 28, 28);
+    margin: 20px auto;
+}
+footer .foot{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+}
+/* footer  */
+/* blog page  */
+#blog{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,350px);
+    justify-content: center;
+    align-items: center;
+    row-gap: 60px;
+    column-gap: 20px;
+    padding-bottom: 50px;
+}
+.article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+}
+.blog-desc{
+    width: 100%;
+    padding: 10px 20px;
+}
+.img-blog{
+    height: 200px;
+    width: 100%;
+}
+.img-blog img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+body .article{
+    background: rgb(255, 255, 255);
+    height: 500px;
+}
+.article .img-blog img{
+    width: 100%;
+    height: 100%;
+}
+/* blog page  */
+
+
+/* navigaton responsive */
+@media screen and (max-width:700px) {
+    body{
+        overflow-x: hidden;
+    }
+    .open-btn{
+        display: block;
+    }
+    .close-btn{
+        display: block;
+    }
+    .bxs-moon{
+        bottom: 20px;
+        right: 20px;
+        cursor: pointer;
+    }
+    nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    nav .get-btn{
+        display: none;
+    }
+    nav .menu{
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        right: 0px;
+        top: 0;
+        height: 100vh;
+        margin-right: -400px;
+        margin-top: -1px;
+        width: 300px;
+        background: rgba(0, 0, 0, 0.219);
+        backdrop-filter: blur(10px);
+        color: rgb(12, 12, 12);
+        padding-top: 40px;
+        padding-left: 10px;
+        z-index: 20;
+    }
+    nav .menu a{
+        padding-top: 10px;
+        width: 100%;
+        margin-top: 5px;
+    }
+    nav .menu a:hover{
+        letter-spacing: 2px;
+        color: white;
+        transition: letter-spacing .3s;
+    }
+    footer .left p{
+        width: 90%;
+    }
+}
+/* navigaton responsive */
