@@ -55,6 +55,7 @@ body.dark .open-btn{
     width: 100%;
     min-height: 100vh;
 }
+
 nav img{
     margin-top: 10px;
     margin-left: 20px;
@@ -75,9 +76,11 @@ nav .menu{
     right: 200px;
     font-size: 1.3rem;
     color: #212121;
+    z-index: 200;
 }
 .bxs-sun{
     color: rgb(232, 232, 232);
+    z-index: 200;
 }
 .bxs-moon:active{
     transition: .3s;
@@ -94,6 +97,7 @@ nav .menu{
     display: none;
 }
 header{
+    width: 100vw;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -218,7 +222,7 @@ section.form form #message{
 /* footer  */
 footer{
     min-height: 50vh;
-    width: 100%;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: space-between;

@@ -33,3 +33,4 @@ themeBtn.addEventListener('click',()=>{
     closeBtn.style.color = "#f1f1f1"
 })
 // changing theme script 
+
